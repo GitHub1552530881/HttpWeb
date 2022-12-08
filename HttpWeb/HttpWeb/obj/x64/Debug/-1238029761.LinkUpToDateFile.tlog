@@ -1,0 +1,1 @@
+g++ -o "/root/projects/HttpWeb/bin/x64/Debug/HttpWeb.out" -Wl,--no-undefined -Wl,-z,relro -Wl,-z,now -Wl,-z,noexecstack /root/projects/HttpWeb/obj/x64/Debug/main.o /root/projects/HttpWeb/obj/x64/Debug/server.o -lpthread

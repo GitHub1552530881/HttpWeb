@@ -1,0 +1,125 @@
+﻿生成启动时间为 2022/12/8 14:49:23。
+     1>项目“D:\code\VS2017_code\linuxcode\HttpWeb\HttpWeb\HttpWeb.vcxproj”在节点 2 上(Rebuild 个目标)。
+     1>_PrepareForClean:
+         正在删除文件“D:\code\VS2017_code\linuxcode\HttpWeb\HttpWeb\obj\x64\Debug\HttpWeb.tlog\HttpWeb.lastbuildstate”。
+       InitializeBuildStatus:
+         正在创建“D:\code\VS2017_code\linuxcode\HttpWeb\HttpWeb\obj\x64\Debug\HttpWeb.tlog\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+       _ValidateSources:
+         Validating sources
+       _CopySources:
+         Copying sources remotely to '192.168.79.129'
+         Copying file 'D:\code\VS2017_code\linuxcode\HttpWeb\HttpWeb\main.c' to '/root/projects/HttpWeb/main.c'
+         Copying file 'D:\code\VS2017_code\linuxcode\HttpWeb\HttpWeb\server.c' to '/root/projects/HttpWeb/server.c'
+         Copying file 'D:\code\VS2017_code\linuxcode\HttpWeb\HttpWeb\server.h' to '/root/projects/HttpWeb/server.h'
+       _ValidateValidArchitecture:
+         Validating architecture
+         Current project architecture 'x64' is compatible with the remote system architecture 'x64' ('x64').
+       ClCompile:
+         Starting remote build
+         Compiling sources:
+         Invoking 'g++'
+         g++ -c -x c /root/projects/HttpWeb/main.c -g2 -gdwarf-2 -o "/root/projects/HttpWeb/obj/x64/Debug/main.o" -Wall -Wswitch -W"no-deprecated-declarations" -W"empty-body" -Wconversion -W"return-type" -Wparentheses -W"no-pointer-sign" -W"no-format" -Wuninitialized -W"unreachable-code" -W"unused-function" -W"unused-value" -W"unused-variable" -O0 -fno-strict-aliasing -fno-omit-frame-pointer -fexceptions -std=gnu11
+         main.c
+         Done compiling '/root/projects/HttpWeb/main.c'
+         Invoking 'g++'
+         g++ -c -x c /root/projects/HttpWeb/server.c -g2 -gdwarf-2 -o "/root/projects/HttpWeb/obj/x64/Debug/server.o" -Wall -Wswitch -W"no-deprecated-declarations" -W"empty-body" -Wconversion -W"return-type" -Wparentheses -W"no-pointer-sign" -W"no-format" -Wuninitialized -W"unreachable-code" -W"unused-function" -W"unused-value" -W"unused-variable" -O0 -fno-strict-aliasing -fno-omit-frame-pointer -fexceptions -std=gnu11
+         server.c
+     1>D:\code\VS2017_code\linuxcode\HttpWeb\HttpWeb\server.c(159,16): warning : conversion from ‘ssize_t’ {aka ‘long int’} to ‘int’ may change value [-Wconversion]
+D:\code\VS2017_code\linuxcode\HttpWeb\HttpWeb\server.c(159,16): warning :   159 |  while ((len = recv(info->fd, tmp, sizeof(tmp), 0)) > 0)
+D:\code\VS2017_code\linuxcode\HttpWeb\HttpWeb\server.c(159,16): warning :       |                ^~~~
+     1>D:\code\VS2017_code\linuxcode\HttpWeb\HttpWeb\server.c(163,29): warning : conversion to ‘size_t’ {aka ‘long unsigned int’} from ‘int’ may change the sign of the result [-Wsign-conversion]
+D:\code\VS2017_code\linuxcode\HttpWeb\HttpWeb\server.c(163,29): warning :   163 |    memcpy(buf + total, tmp, len);
+D:\code\VS2017_code\linuxcode\HttpWeb\HttpWeb\server.c(163,29): warning :       |                             ^~~
+     1>D:\code\VS2017_code\linuxcode\HttpWeb\HttpWeb\server.c(171,13): warning : conversion from ‘long int’ to ‘int’ may change value [-Wconversion]
+D:\code\VS2017_code\linuxcode\HttpWeb\HttpWeb\server.c(171,13): warning :   171 |   int len = pt - buf;
+D:\code\VS2017_code\linuxcode\HttpWeb\HttpWeb\server.c(171,13): warning :       |             ^~
+     1>D:\code\VS2017_code\linuxcode\HttpWeb\HttpWeb\server.c(236,52): warning : conversion to ‘int’ from ‘__mode_t’ {aka ‘unsigned int’} may change the sign of the result [-Wsign-conversion]
+D:\code\VS2017_code\linuxcode\HttpWeb\HttpWeb\server.c(236,52): warning :   236 |   sendMsgHead(cfd, 200, "OK", getFileType(file), st.st_mode);
+D:\code\VS2017_code\linuxcode\HttpWeb\HttpWeb\server.c(236,52): warning :       |                                                  ~~^~~~~~~~
+     1>D:\code\VS2017_code\linuxcode\HttpWeb\HttpWeb\server.c(270,13): warning : conversion from ‘__off_t’ {aka ‘long int’} to ‘int’ may change value [-Wconversion]
+D:\code\VS2017_code\linuxcode\HttpWeb\HttpWeb\server.c(270,13): warning :   270 |  int size = lseek(fd, 0, SEEK_END);
+D:\code\VS2017_code\linuxcode\HttpWeb\HttpWeb\server.c(270,13): warning :       |             ^~~~~
+     1>D:\code\VS2017_code\linuxcode\HttpWeb\HttpWeb\server.c(275,35): warning : conversion to ‘size_t’ {aka ‘long unsigned int’} from ‘off_t’ {aka ‘long int’} may change the sign of the result [-Wsign-conversion]
+D:\code\VS2017_code\linuxcode\HttpWeb\HttpWeb\server.c(275,35): warning :   275 |   sendfile(cfd, fd, &offset, size - offset);//����1������ļ�������������2������ļ�������������3ƫ����
+D:\code\VS2017_code\linuxcode\HttpWeb\HttpWeb\server.c(275,35): warning :       |                              ~~~~~^~~~~~~~
+     1>D:\code\VS2017_code\linuxcode\HttpWeb\HttpWeb\server.c(413,32): warning : conversion from ‘int’ to ‘char’ may change value [-Wconversion]
+D:\code\VS2017_code\linuxcode\HttpWeb\HttpWeb\server.c(413,32): warning :   413 |    *to = hexToDec(from[1] * 16 + hexToDec(from[2]));
+D:\code\VS2017_code\linuxcode\HttpWeb\HttpWeb\server.c(413,32): warning :       |                   ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+     1>D:\code\VS2017_code\linuxcode\HttpWeb\HttpWeb\server.c(413,10): warning : conversion from ‘int’ to ‘char’ may change value [-Wconversion]
+D:\code\VS2017_code\linuxcode\HttpWeb\HttpWeb\server.c(413,10): warning :   413 |    *to = hexToDec(from[1] * 16 + hexToDec(from[2]));
+D:\code\VS2017_code\linuxcode\HttpWeb\HttpWeb\server.c(413,10): warning :       |          ^~~~~~~~
+         Done compiling '/root/projects/HttpWeb/server.c'
+         /root/projects/HttpWeb/server.c: In function ‘recvHttpRequest’:
+         /root/projects/HttpWeb/server.c:159:16: warning: conversion from ‘ssize_t’ {aka ‘long int’} to ‘int’ may change value [-Wconversion]
+           159 |  while ((len = recv(info->fd, tmp, sizeof(tmp), 0)) > 0)
+               |                ^~~~
+         /root/projects/HttpWeb/server.c:163:29: warning: conversion to ‘size_t’ {aka ‘long unsigned int’} from ‘int’ may change the sign of the result [-Wsign-conversion]
+           163 |    memcpy(buf + total, tmp, len);
+               |                             ^~~
+         /root/projects/HttpWeb/server.c:171:13: warning: conversion from ‘long int’ to ‘int’ may change value [-Wconversion]
+           171 |   int len = pt - buf;
+               |             ^~
+         /root/projects/HttpWeb/server.c: In function ‘parseRequestLine’:
+         /root/projects/HttpWeb/server.c:236:52: warning: conversion to ‘int’ from ‘__mode_t’ {aka ‘unsigned int’} may change the sign of the result [-Wsign-conversion]
+           236 |   sendMsgHead(cfd, 200, "OK", getFileType(file), st.st_mode);
+               |                                                  ~~^~~~~~~~
+         /root/projects/HttpWeb/server.c: In function ‘sendFile’:
+         /root/projects/HttpWeb/server.c:270:13: warning: conversion from ‘__off_t’ {aka ‘long int’} to ‘int’ may change value [-Wconversion]
+           270 |  int size = lseek(fd, 0, SEEK_END);
+               |             ^~~~~
+         /root/projects/HttpWeb/server.c:275:35: warning: conversion to ‘size_t’ {aka ‘long unsigned int’} from ‘off_t’ {aka ‘long int’} may change the sign of the result [-Wsign-conversion]
+           275 |   sendfile(cfd, fd, &offset, size - offset);//����1������ļ�������������2������ļ�������������3ƫ����
+               |                              ~~~~~^~~~~~~~
+         /root/projects/HttpWeb/server.c: In function ‘decodeMsg’:
+         /root/projects/HttpWeb/server.c:413:32: warning: conversion from ‘int’ to ‘char’ may change value [-Wconversion]
+           413 |    *to = hexToDec(from[1] * 16 + hexToDec(from[2]));
+               |                   ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+         /root/projects/HttpWeb/server.c:413:10: warning: conversion from ‘int’ to ‘char’ may change value [-Wconversion]
+           413 |    *to = hexToDec(from[1] * 16 + hexToDec(from[2]));
+               |          ^~~~~~~~
+         
+       Link:
+         Linking objects
+         Invoking 'ld'
+         g++ -o "/root/projects/HttpWeb/bin/x64/Debug/HttpWeb.out" -Wl,--no-undefined -Wl,-z,relro -Wl,-z,now -Wl,-z,noexecstack /root/projects/HttpWeb/obj/x64/Debug/main.o /root/projects/HttpWeb/obj/x64/Debug/server.o -lpthread
+         Done linking, output file name: '/root/projects/HttpWeb/bin/x64/Debug/HttpWeb.out'
+         Copying file '/root/projects/HttpWeb/bin/x64/Debug/HttpWeb.out' to 'D:\code\VS2017_code\linuxcode\HttpWeb\HttpWeb\bin\x64\Debug\HttpWeb.out'
+         HttpWeb.vcxproj -> D:\code\VS2017_code\linuxcode\HttpWeb\HttpWeb\bin\x64\Debug\HttpWeb.out
+       FinalizeBuildStatus:
+         正在删除文件“D:\code\VS2017_code\linuxcode\HttpWeb\HttpWeb\obj\x64\Debug\HttpWeb.tlog\unsuccessfulbuild”。
+         正在对“D:\code\VS2017_code\linuxcode\HttpWeb\HttpWeb\obj\x64\Debug\HttpWeb.tlog\HttpWeb.lastbuildstate”执行 Touch 任务。
+     1>已完成生成项目“D:\code\VS2017_code\linuxcode\HttpWeb\HttpWeb\HttpWeb.vcxproj”(Rebuild 个目标)的操作。
+
+已成功生成。
+
+       “D:\code\VS2017_code\linuxcode\HttpWeb\HttpWeb\HttpWeb.vcxproj”(Rebuild 目标) (1) ->
+       (ClCompile 目标) -> 
+         D:\code\VS2017_code\linuxcode\HttpWeb\HttpWeb\server.c(159,16): warning : conversion from ‘ssize_t’ {aka ‘long int’} to ‘int’ may change value [-Wconversion]
+       D:\code\VS2017_code\linuxcode\HttpWeb\HttpWeb\server.c(159,16): warning :   159 |  while ((len = recv(info->fd, tmp, sizeof(tmp), 0)) > 0)
+       D:\code\VS2017_code\linuxcode\HttpWeb\HttpWeb\server.c(159,16): warning :       |                ^~~~
+         D:\code\VS2017_code\linuxcode\HttpWeb\HttpWeb\server.c(163,29): warning : conversion to ‘size_t’ {aka ‘long unsigned int’} from ‘int’ may change the sign of the result [-Wsign-conversion]
+       D:\code\VS2017_code\linuxcode\HttpWeb\HttpWeb\server.c(163,29): warning :   163 |    memcpy(buf + total, tmp, len);
+       D:\code\VS2017_code\linuxcode\HttpWeb\HttpWeb\server.c(163,29): warning :       |                             ^~~
+         D:\code\VS2017_code\linuxcode\HttpWeb\HttpWeb\server.c(171,13): warning : conversion from ‘long int’ to ‘int’ may change value [-Wconversion]
+       D:\code\VS2017_code\linuxcode\HttpWeb\HttpWeb\server.c(171,13): warning :   171 |   int len = pt - buf;
+       D:\code\VS2017_code\linuxcode\HttpWeb\HttpWeb\server.c(171,13): warning :       |             ^~
+         D:\code\VS2017_code\linuxcode\HttpWeb\HttpWeb\server.c(236,52): warning : conversion to ‘int’ from ‘__mode_t’ {aka ‘unsigned int’} may change the sign of the result [-Wsign-conversion]
+       D:\code\VS2017_code\linuxcode\HttpWeb\HttpWeb\server.c(236,52): warning :   236 |   sendMsgHead(cfd, 200, "OK", getFileType(file), st.st_mode);
+       D:\code\VS2017_code\linuxcode\HttpWeb\HttpWeb\server.c(236,52): warning :       |                                                  ~~^~~~~~~~
+         D:\code\VS2017_code\linuxcode\HttpWeb\HttpWeb\server.c(270,13): warning : conversion from ‘__off_t’ {aka ‘long int’} to ‘int’ may change value [-Wconversion]
+       D:\code\VS2017_code\linuxcode\HttpWeb\HttpWeb\server.c(270,13): warning :   270 |  int size = lseek(fd, 0, SEEK_END);
+       D:\code\VS2017_code\linuxcode\HttpWeb\HttpWeb\server.c(270,13): warning :       |             ^~~~~
+         D:\code\VS2017_code\linuxcode\HttpWeb\HttpWeb\server.c(275,35): warning : conversion to ‘size_t’ {aka ‘long unsigned int’} from ‘off_t’ {aka ‘long int’} may change the sign of the result [-Wsign-conversion]
+       D:\code\VS2017_code\linuxcode\HttpWeb\HttpWeb\server.c(275,35): warning :   275 |   sendfile(cfd, fd, &offset, size - offset);//����1������ļ�������������2������ļ�������������3ƫ����
+       D:\code\VS2017_code\linuxcode\HttpWeb\HttpWeb\server.c(275,35): warning :       |                              ~~~~~^~~~~~~~
+         D:\code\VS2017_code\linuxcode\HttpWeb\HttpWeb\server.c(413,32): warning : conversion from ‘int’ to ‘char’ may change value [-Wconversion]
+       D:\code\VS2017_code\linuxcode\HttpWeb\HttpWeb\server.c(413,32): warning :   413 |    *to = hexToDec(from[1] * 16 + hexToDec(from[2]));
+       D:\code\VS2017_code\linuxcode\HttpWeb\HttpWeb\server.c(413,32): warning :       |                   ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+         D:\code\VS2017_code\linuxcode\HttpWeb\HttpWeb\server.c(413,10): warning : conversion from ‘int’ to ‘char’ may change value [-Wconversion]
+       D:\code\VS2017_code\linuxcode\HttpWeb\HttpWeb\server.c(413,10): warning :   413 |    *to = hexToDec(from[1] * 16 + hexToDec(from[2]));
+       D:\code\VS2017_code\linuxcode\HttpWeb\HttpWeb\server.c(413,10): warning :       |          ^~~~~~~~
+
+    8 个警告
+    0 个错误
+
+已用时间 00:00:02.82
